@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./ExpenseApp.module.css";
 import OverView from "../OverView/OverView";
 import TransAction from "../TransAction/TransAction";
 
@@ -7,9 +8,13 @@ const ExpenseApp = () => {
   const [incom, setIncome] = useState(0);
   const [transaction, setTransaction] = useState([]);
   return (
-    <div>
-      <OverView expense={expense} incom={incom} />
-      <TransAction transaction={transaction} />
+    <div className={styles.container}>
+      <div>
+        <OverView expense={expense} incom={incom} />
+      </div>
+      <div>
+        <TransAction transaction={transaction} />
+      </div>
     </div>
   );
 };

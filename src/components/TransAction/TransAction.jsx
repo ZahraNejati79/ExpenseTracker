@@ -1,9 +1,11 @@
+import styles from "./TransAction.module.css";
 const TransAction = ({ transaction }) => {
   return (
-    <div>
-      <h3>Transaction</h3>
-      <div>Search</div>
-      <div>as</div>
+    <div className={styles.transAction}>
+      <div>
+        <p>Transaction</p>
+      </div>
+      <div>Search as</div>
     </div>
   );
 };

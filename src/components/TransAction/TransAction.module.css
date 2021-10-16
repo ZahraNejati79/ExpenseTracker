@@ -1,0 +1,8 @@
+.transAction {
+  padding-top: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}

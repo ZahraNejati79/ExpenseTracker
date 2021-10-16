@@ -1,0 +1,24 @@
+.sectionOverview {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.expensincom {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.expensincom div {
+  border: 1px solid rgba(26, 2, 2, 0.178);
+  margin: 6px;
+  border-radius: 5px;
+}
