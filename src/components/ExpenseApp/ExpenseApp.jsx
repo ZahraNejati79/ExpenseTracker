@@ -7,10 +7,19 @@ const ExpenseApp = () => {
   const [expense, setSpense] = useState(0);
   const [incom, setIncome] = useState(0);
   const [transaction, setTransaction] = useState([]);
+  const addTarnsAction = (formValues) => {
+    console.log(formValues);
+    const data = { ...formValues, id: Date.now };
+    setTransaction([...transaction, data]);
+  };
   return (
     <div className={styles.container}>
       <div>
-        <OverView expense={expense} incom={incom} />
+        <OverView
+          expense={expense}
+          incom={incom}
+          addTarnsAction={addTarnsAction}
+        />
       </div>
       <div>
         <TransAction transaction={transaction} />

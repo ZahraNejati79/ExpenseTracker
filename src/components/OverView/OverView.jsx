@@ -1,14 +1,21 @@
+import { useState } from "react";
+import TransActionForm from "../TransActionForm/TransActionFrom";
 import styles from "./OverView.module.css";
-const OverView = ({ incom, expense }) => {
+
+const OverView = ({ income, expense, addTarnsAction }) => {
+  const [isShow, setIsShow] = useState(false);
   return (
     <section className={styles.sectionOverview}>
       <div className={styles.overview}>
-        <p>Balance: {incom - expense}</p>
-        <button>Add</button>
+        <p>Balance: {income - expense}</p>
+        <button onClick={() => setIsShow((prevState) => !prevState)}>
+          {isShow ? "Cancel" : " Add"}
+        </button>
       </div>
+      {isShow && <TransActionForm addTarnsAction={addTarnsAction} />}
       <div className={styles.expensincom}>
         <div>Expense:{expense}</div>
-        <div>Income:{incom}</div>
+        <div>Income:{income}</div>
       </div>
     </section>
   );
