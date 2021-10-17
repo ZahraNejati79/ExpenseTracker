@@ -8,14 +8,21 @@ const OverView = ({ income, expense, addTarnsAction }) => {
     <section className={styles.sectionOverview}>
       <div className={styles.overview}>
         <p>Balance: {income - expense}</p>
-        <button onClick={() => setIsShow((prevState) => !prevState)}>
+        <button
+          className={`${isShow ? styles.cancel : styles.btn}`}
+          onClick={() => setIsShow((prevState) => !prevState)}
+        >
           {isShow ? "Cancel" : " Add"}
         </button>
       </div>
       {isShow && <TransActionForm addTarnsAction={addTarnsAction} />}
       <div className={styles.expensincom}>
-        <div>Expense:{expense}</div>
-        <div>Income:{income}</div>
+        <div className={styles.box}>
+          Expense:<span style={{ color: "red" }}>{expense} $</span>
+        </div>
+        <div className={styles.box}>
+          Income:<span> {income} $</span>
+        </div>
       </div>
     </section>
   );

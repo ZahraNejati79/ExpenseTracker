@@ -17,8 +17,33 @@
   justify-content: space-between;
   align-items: center;
 }
-.expensincom div {
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding-left: 10px;
   border: 1px solid rgba(26, 2, 2, 0.178);
   margin: 6px;
   border-radius: 5px;
+}
+.box span {
+  font-weight: bold;
+  color: green;
+}
+.btn {
+  border: 1px solid rgba(136, 136, 136, 0.459);
+  border-radius: 5px;
+  padding: 5px 8px;
+  background-color: rgba(136, 136, 136, 0.459);
+  color: rgb(26, 26, 26);
+  cursor: pointer;
+}
+.cancel {
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 5px 8px;
+  background-color: rgba(214, 214, 214, 0.459);
+  color: red;
+  cursor: pointer;
 }

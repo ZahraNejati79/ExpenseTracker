@@ -20,6 +20,7 @@ const TransActionForm = ({ addTarnsAction }) => {
       className={styles.formTransAction}
     >
       <input
+        placeholder="description"
         action="text"
         name="desc"
         value={formValue.desc}
@@ -27,28 +28,33 @@ const TransActionForm = ({ addTarnsAction }) => {
         onChange={changeHandler}
       ></input>
       <input
+        placeholder="amount"
         action="number"
         name="amount"
         value={formValue.amount}
         checked={formValue.type == "income"}
         onChange={changeHandler}
       ></input>
-      <div>
+      <div className={styles.raidoinput}>
         <input
           type="radio"
           value="expense"
           name="type"
           onChange={changeHandler}
+          id="expense"
         />
-        <label>Expense</label>
+        <label htmlFor="expense">Expense</label>
         <input
           type="radio"
           value="income"
           name="type"
           onChange={changeHandler}
+          id="income"
         />
-        <label>Income</label>
-        <button type="submit">Add transaction</button>
+        <label htmlFor="income">Income</label>
+        <button className={styles.btn} type="submit">
+          Add transaction
+        </button>
       </div>
     </form>
   );
