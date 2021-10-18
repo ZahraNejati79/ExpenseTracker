@@ -1,5 +1,10 @@
 .transAction {
-  background-color: aqua;
-  margin-top: 10px;
   display: flex;
+  justify-content: space-between;
+  padding: 2px 7px;
+  border: 1px solid #dddddd;
+  background-color: #eeeeee;
+  border-radius: 5px;
+  margin-top: 10px;
+  border-right: 3px solid green;
 }

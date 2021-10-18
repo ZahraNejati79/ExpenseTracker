@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./TransActionForm.module.css";
-const TransActionForm = ({ addTarnsAction }) => {
+const TransActionForm = ({ addTarnsAction, setIsShow }) => {
   const [formValue, setFormValue] = useState({
     type: "expense",
     amount: 0,
@@ -12,6 +12,7 @@ const TransActionForm = ({ addTarnsAction }) => {
   const submitHandler = (e) => {
     e.preventDefault();
     addTarnsAction(formValue);
+    setIsShow(false);
   };
   return (
     <form
